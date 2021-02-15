@@ -13,18 +13,19 @@ public class SingleLinkedList {
 		newNode.next = null;
 	
 		if(head == null) {
-			//List is empty so insert at begining 
+			//List is empty so insert at begining
+			System.out.println("List is empty");
 			head = newNode;
 		}
-		
-		Node current = head;
-		while(current.next != null) {
-			//Iterate fully over List
-			current = current.next;
+		else {
+			Node current = head;
+			while(current.next != null) {
+				//Iterate fully over List
+				current = current.next;
+			}
+			//add New Node here
+			current.next = newNode;
 		}
-		//add New Node here
-		current.next = newNode;
-		
 	}
 	public void add(int data,int position) {
 		
